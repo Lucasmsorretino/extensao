@@ -1,65 +1,78 @@
-# FastAPI Project Documentation
+# README.md
 
-This project is a FastAPI application that provides an API for managing routines. 
+## 📱 App CMEI - Comunicação Digital com Famílias
 
-## Project Structure
+Este projeto é um aplicativo mobile com backend em Python que visa substituir a agenda física usada por creches públicas (CMEIs), facilitando a comunicação entre profissionais da educação e famílias das crianças matriculadas.
 
+---
+
+### 🚀 Funcionalidades
+- Login para pais e profissionais
+- Publicação de avisos e recados
+- Registro da rotina da criança (alimentação, sono, atividades)
+- Notificações de saúde (medicação, doenças)
+- Consulta ao calendário escolar e cardápio
+- Notificações push
+
+---
+
+### 🧱 Tecnologias Utilizadas
+- **Backend**: FastAPI (Python)
+- **Banco de Dados**: SQLite / PostgreSQL
+- **Autenticação**: JWT
+- **Notificações**: Firebase Cloud Messaging
+- **Frontend (mobile)**: Flutter (Dart)
+- **Hospedagem**: Railway / Render / Heroku
+
+---
+
+### 🏗️ Estrutura do Projeto
 ```
-backend
-├── routes
-│   └── rotina_routes.py  # Defines the FastAPI router with a GET endpoint for routines
-├── .gitignore             # Specifies files and directories to be ignored by Git
-└── README.md              # Documentation for the project
-```
-
-## Installation
-
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   ```
-2. Navigate to the project directory:
-   ```
-   cd backend
-   ```
-3. Create a virtual environment:
-   ```
-   python -m venv venv
-   ```
-4. Activate the virtual environment:
-   - On Windows:
-     ```
-     venv\Scripts\activate
-     ```
-   - On macOS/Linux:
-     ```
-     source venv/bin/activate
-     ```
-5. Install the required packages:
-   ```
-   pip install fastapi uvicorn
-   ```
-
-## Running the Application
-
-To run the FastAPI application, use the following command:
-```
-uvicorn main:app --reload
+app-creche/
+├── backend/
+│   ├── main.py
+│   ├── models.py
+│   ├── routes/
+│   └── database/
+├── mobile/
+│   └── flutter_project/
+├── planning.md
+├── task.md
+└── README.md
 ```
 
-Replace `main:app` with the appropriate module and application instance if necessary.
+---
 
-## API Endpoints
+### ⚙️ Instalação e Execução do Backend
+```bash
+# Clonar repositório
+$ git clone https://github.com/seu-usuario/app-creche.git
+$ cd app-creche/backend
 
-### List Routines
+# Criar ambiente virtual
+$ python -m venv venv
+$ source venv/bin/activate  # ou venv\Scripts\activate no Windows
 
-- **GET** `/rotina/`
-  - Returns a list of routines.
+# Instalar dependências
+$ pip install -r requirements.txt
 
-## Contributing
+# Rodar o servidor
+$ uvicorn main:app --reload
+```
 
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes. 
+---
 
-## License
+### 🤝 Contribuição
+Pull requests são bem-vindos! Sinta-se à vontade para abrir issues com dúvidas ou sugestões.
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+---
+
+### 📄 Licença
+MIT. Livre para uso, modificação e distribuição.
+
+---
+
+### 👨‍👩‍👧 Público-Alvo
+- CMEIs e escolas públicas
+- Pais/responsáveis por crianças
+- Profissionais da educação infantil

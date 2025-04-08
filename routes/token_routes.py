@@ -8,7 +8,7 @@ router = APIRouter(tags=["Autenticação"])
 # Usuário fake de exemplo (substituir por banco de dados futuramente)
 fake_user = {
     "username": "lucas",
-    "hashed_password": "$2b$12$e9T8zQaZih95LkU0z7R1weXhvBb4.0thmLKZPy2UySnUqEdKzt58e"  # senha123
+    "hashed_password": "$2b$12$1uDU./dVM25/Ei78hE/PquVC4seoxlNyhKmLwkSUk73A85NV9B.fO"  # senha123
 }
 
 @router.post("/token")

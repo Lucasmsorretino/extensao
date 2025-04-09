@@ -1,6 +1,10 @@
 from fastapi import FastAPI
-from routes import user_routes, aviso_routes, rotina_routes, saude_routes, calendario_routes
-from routes import token_routes
+from routes import token_routes, aviso_routes, rotina_routes, saude_routes, calendario_routes
+from database.db import create_db_and_tables
+
+@app.on_event("startup")
+def on_startup():
+    create_db_and_tables()
 
 app = FastAPI(title="CMEI App API")
 

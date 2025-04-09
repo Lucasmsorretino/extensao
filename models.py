@@ -1,6 +1,17 @@
 from pydantic import BaseModel
 from typing import Optional
 from datetime import datetime
+from sqlmodel import SQLModel, Field
+from datetime import datetime
+from typing import Optional
+
+
+
+class Aviso(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    titulo: str
+    mensagem: str
+    data: datetime = Field(default_factory=datetime.utcnow)
 
 class User(BaseModel):
     id: int
@@ -8,12 +19,6 @@ class User(BaseModel):
     email: str
     senha: str
     tipo: str  # 'responsavel' ou 'funcionario'
-
-class Aviso(BaseModel):
-    id: int
-    titulo: str
-    mensagem: str
-    data: datetime
 
 class Rotina(BaseModel):
     id: int

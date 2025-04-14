@@ -1,6 +1,7 @@
 from fastapi import APIRouter
-from auth import decode_access_token
+from backend.auth import decode_access_token
 from fastapi import Depends
+from models.calendario import Calendario
 
 router = APIRouter(prefix="/calendario", tags=["Calendário"])
 

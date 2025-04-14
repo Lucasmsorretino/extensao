@@ -13,7 +13,7 @@ Criação de um aplicativo mobile com backend em Python para facilitar a comunic
 ### 🧱 Arquitetura
 - **Frontend mobile**: Flutter (Dart) [pode ser substituído futuramente]
 - **Backend**: FastAPI (Python)
-- **Banco de dados**: SQLite (desenvolvimento) / PostgreSQL (produção)
+- **Banco de dados**: SQLite (desenvolvimento) /  (produção)
 - **Autenticação**: JWT
 - **Notificações Push**: Firebase Cloud Messaging (FCM)
 - **Hospedagem backend**: Render, Railway ou Heroku
@@ -23,7 +23,7 @@ Criação de um aplicativo mobile com backend em Python para facilitar a comunic
 |----------------|------------------------|-----------|
 | Frontend       | Flutter (mobile)       | Dart      |
 | Backend        | FastAPI                | Python    |
-| Banco de dados | SQLite / PostgreSQL    | SQL       |
+| Banco de dados | SQLite / SQLModel       | SQL       |
 | CI/CD          | GitHub Actions         | YAML      |
 | Versionamento  | Git + GitHub           | -         |
 | Notificações   | Firebase Cloud Messaging| -        |

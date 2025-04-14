@@ -12,17 +12,17 @@ Este projeto é um aplicativo mobile com backend em Python que visa substituir a
 - Registro da rotina da criança (alimentação, sono, atividades)
 - Notificações de saúde (medicação, doenças)
 - Consulta ao calendário escolar e cardápio
-- Notificações push
+- Notificações push (em planejamento)
 
 ---
 
 ### 🧱 Tecnologias Utilizadas
 - **Backend**: FastAPI (Python)
-- **Banco de Dados**: SQLite / PostgreSQL
-- **Autenticação**: JWT
-- **Notificações**: Firebase Cloud Messaging
+- **Banco de Dados**: SQLite com SQLModel
+- **Autenticação**: JWT com python-jose e passlib
+- **Notificações**: Firebase Cloud Messaging (planejado)
 - **Frontend (mobile)**: Flutter (Dart)
-- **Hospedagem**: Railway / Render / Heroku
+- **Hospedagem**: Railway / Render / Heroku (em definição)
 
 ---
 
@@ -32,8 +32,10 @@ app-creche/
 ├── backend/
 │   ├── main.py
 │   ├── models.py
+│   ├── auth.py
 │   ├── routes/
-│   └── database/
+│   ├── database/
+│   └── requirements.txt
 ├── mobile/
 │   └── flutter_project/
 ├── planning.md

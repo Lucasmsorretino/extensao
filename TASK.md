@@ -1,15 +1,15 @@
 # TASK.md
 
 ## ✅ Tarefas Atuais
-- [ ] Criar estrutura inicial do backend com FastAPI
-- [ ] Definir modelo de dados (Usuário, Aviso, Rotina, Saúde, Calendário)
-- [ ] Criar sistema de autenticação com JWT
-- [ ] Configurar banco de dados SQLite para desenvolvimento
-- [ ] Criar endpoint: /login
-- [ ] Criar endpoint: /avisos (CRUD)
-- [ ] Criar endpoint: /rotina
-- [ ] Criar endpoint: /saude
-- [ ] Criar endpoint: /calendario
+- [x] Criar estrutura inicial do backend com FastAPI
+- [x] Definir modelo de dados (Usuário, Aviso, Rotina, Saúde, Calendário)
+- [x] Criar sistema de autenticação com JWT
+- [x] Configurar banco de dados SQLite para desenvolvimento
+- [x] Criar endpoint: /login
+- [x] Criar endpoint: /avisos (CRUD)
+- [x] Criar endpoint: /rotina
+- [x] Criar endpoint: /saude
+- [x] Criar endpoint: /calendario
 - [ ] Configurar deploy do backend (Render ou Railway)
 - [ ] Iniciar protótipo das telas mobile
 - [ ] Documentar API com Swagger (FastAPI já embutido)

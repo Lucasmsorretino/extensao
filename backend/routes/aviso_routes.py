@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends
 from sqlmodel import Session, select
 from typing import List
-from auth import decode_access_token
+from backend.auth import decode_access_token
 from database.db import get_session
 from models.aviso import Aviso
 

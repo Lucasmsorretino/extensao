@@ -1,6 +1,7 @@
 from fastapi import APIRouter
-from auth import decode_access_token
+from backend.auth import decode_access_token
 from fastapi import Depends
+from models.saude import Saude
 
 router = APIRouter(prefix="/saude", tags=["Saúde"])
 

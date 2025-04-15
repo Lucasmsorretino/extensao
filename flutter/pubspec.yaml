@@ -1,0 +1,16 @@
+name: extensao_flutter
+description: A new Flutter project for extensao.
+
+environment:
+  sdk: '^3.7.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true

@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:extensao_flutter/main.dart';
+import 'package:extensao_frontend/main.dart';
 
 void main() {
   testWidgets('Login button navigates to home', (WidgetTester tester) async {

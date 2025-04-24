@@ -47,7 +47,7 @@ app-creche/
 - Login (pais e funcionários)
 - Avisos e recados
 - Rotina diária da criança
-- Notificações de saúde (remédios, doenças)
+- Notificações/especficações de saúde (remédios, doenças)
 - Calendário escolar e cardápio
 - Notificações push
 

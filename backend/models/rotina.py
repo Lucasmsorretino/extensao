@@ -1,8 +1,16 @@
-from pydantic import BaseModel
+from sqlmodel import SQLModel, Field, Relationship
+from typing import Optional
 from datetime import datetime
 
-class Rotina(BaseModel):
-    id: int
-    usuario_id: int
-    data: datetime
-    descricao: str
+
+class Rotina(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    date: datetime = Field(default_factory=datetime.now)
+    child_id: int = Field(foreign_key="child.id")
+    alimentacao: str  # Could be more structured in future versions
+    sono: str
+    atividades: str
+    observacoes: Optional[str] = None
+    
+    # Relationships
+    child: Child = Relationship(back_populates="rotinas")

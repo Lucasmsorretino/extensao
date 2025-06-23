@@ -1,7 +1,12 @@
 from sqlmodel import SQLModel, Field, Relationship
-from typing import Optional, List
+from typing import Optional, List, TYPE_CHECKING
 from datetime import datetime
 from enum import Enum
+
+if TYPE_CHECKING:
+    from .aviso import Aviso
+    from .rotina import Rotina
+    from .saude import SaudeRecord
 
 class UserType(str, Enum):
     PARENT = "parent"
@@ -17,8 +22,7 @@ class User(SQLModel, table=True):
     user_type: UserType
     active: bool = True
     created_at: datetime = Field(default_factory=datetime.now)
-    
-    # Relationships
+      # Relationships
     avisos: List["Aviso"] = Relationship(back_populates="author")
     children: List["ChildParentLink"] = Relationship(back_populates="parent")
     
@@ -27,8 +31,7 @@ class Child(SQLModel, table=True):
     name: str
     birth_date: datetime
     classroom: str
-    
-    # Relationships
+      # Relationships
     parents: List["ChildParentLink"] = Relationship(back_populates="child")
     rotinas: List["Rotina"] = Relationship(back_populates="child")
     saude_records: List["SaudeRecord"] = Relationship(back_populates="child")

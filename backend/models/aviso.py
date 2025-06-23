@@ -1,7 +1,9 @@
 from sqlmodel import SQLModel, Field, Relationship
-from typing import Optional, List
+from typing import Optional, List, TYPE_CHECKING
 from datetime import datetime
 
+if TYPE_CHECKING:
+    from .user import User
 
 class Aviso(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
@@ -15,4 +17,4 @@ class Aviso(SQLModel, table=True):
     target_classroom: Optional[str] = None  # If None, for all classrooms
     
     # Relationships
-    author: User = Relationship(back_populates="avisos")
+    author: "User" = Relationship(back_populates="avisos")

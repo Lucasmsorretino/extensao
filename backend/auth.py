@@ -6,7 +6,7 @@ from passlib.context import CryptContext
 from datetime import datetime, timedelta
 from typing import Optional
 from database.session import get_session
-from models.base_models import User
+from models.user import User
 
 # Security constants
 SECRET_KEY = "your-secret-key-here"  # Change this in production!
@@ -97,15 +97,21 @@ def get_current_active_user(current_user: User = Depends(get_current_user)):
 #     to_encode.update({"exp": expire})
 #     return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
 
-# # Middleware de autenticação
-# def decode_access_token(credentials: HTTPAuthorizationCredentials = Depends(security)):
-#     token = credentials.credentials
-#     try:
-#         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-#         return payload
-#     except JWTError:
-#         raise HTTPException(
-#             status_code=status.HTTP_401_UNAUTHORIZED,
-#             detail="Token inválido ou expirado.",
-#             headers={"WWW-Authenticate": "Bearer"},
-#         )
+# Middleware de autenticação
+def decode_access_token(token: str = Depends(oauth2_scheme)):
+    try:
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        username: str = payload.get("sub")
+        if username is None:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Token inválido",
+                headers={"WWW-Authenticate": "Bearer"},
+            )
+        return {"username": username}
+    except JWTError:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Token inválido ou expirado.",
+            headers={"WWW-Authenticate": "Bearer"},
+        )

@@ -2,9 +2,10 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlmodel import Session, select
 from typing import List
 from database.session import get_session
-from models.base_models import Aviso, User
+from models.aviso import Aviso
+from models.user import User
 from datetime import datetime
-from backend.auth import decode_access_token
+from auth import decode_access_token
 
 router = APIRouter(prefix="/avisos", tags=["avisos"])
 

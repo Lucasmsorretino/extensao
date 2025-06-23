@@ -1,7 +1,9 @@
 from sqlmodel import SQLModel, Field, Relationship
-from typing import Optional
+from typing import Optional, TYPE_CHECKING
 from datetime import datetime
 
+if TYPE_CHECKING:
+    from .user import Child
 
 class Rotina(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
@@ -13,4 +15,4 @@ class Rotina(SQLModel, table=True):
     observacoes: Optional[str] = None
     
     # Relationships
-    child: Child = Relationship(back_populates="rotinas")
+    child: "Child" = Relationship(back_populates="rotinas")

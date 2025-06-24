@@ -7,3 +7,4 @@ passlib[bcrypt]
 python-dotenv
 httpx
 pytest
+pytest-asyncio

@@ -26,13 +26,24 @@ Documents\Curso ADS\Disciplinas\Extensao2\extensao\TASK.md
 
 ## 📌 Backlog
 - [ ] Integração com Firebase Cloud Messaging para notificações push
-- [ ] Criar protótipo funcional no Flutter (MVP)
+- [X] Criar protótipo funcional no Flutter (MVP)
 - [ ] Suporte a modo offline no app mobile
 - [ ] Manual do usuário (PDF ou web)
 - [ ] Upload de arquivos e imagens (foto de recado, cardápio, etc)
 - [ ] Painel administrativo web (futuro)
 - [ ] Migração para PostgreSQL em produção
 - [ ] Testes automatizados (backend)
+
+---
+
+## 🚀 Status do MVP
+- [x] CRUD de avisos sem autenticação
+- [x] Configuração de CORS no backend
+- [x] Bypass de login para fluxo rápido (Device Preview)
+- [x] Integração com Device Preview para testes de UI
+- [x] Ajustes de responsividade na UI (login e calendário)
+- [x] Remoção de botão duplicado na tela de avisos
+
 ---
 
 ## 🏁 Marcos do Projeto

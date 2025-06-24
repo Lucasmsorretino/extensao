@@ -1,6 +1,8 @@
 from fastapi import FastAPI
+from starlette.middleware.cors import CORSMiddleware
 from routes import token_routes, aviso_routes, rotina_routes, saude_routes, calendario_routes, user_routes
 from database.db import create_db_and_tables, get_engine
+from create_test_user import create_test_user
 from sqlmodel import select, SQLModel, Session, text
 import datetime
 import platform
@@ -8,9 +10,23 @@ import os
 
 app = FastAPI(title="CMEI App API")
 
+# Configurar CORS para permitir requisições do frontend
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # ou especificar URL do frontend
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 @app.on_event("startup")
 def on_startup():
     create_db_and_tables()
+    # Criar usuário de teste automaticamente
+    try:
+        create_test_user()
+    except Exception as e:
+        print(f"Falha ao criar usuário de teste: {e}")
 
 # Adicionar rota de health check para monitoramento da API
 @app.get("/health")

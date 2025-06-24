@@ -36,12 +36,18 @@ app-creche/
 │   ├── models.py
 │   ├── routes/
 │   └── database/
-├── mobile/
+├── frontend/
 │   └── flutter_project/ (opcional)
 ├── planning.md
 ├── task.md
 └── README.md
 ```
+
+## 🚧 Status do MVP
+- CRUD de avisos sem autenticação
+- Configuração de CORS no backend para permitir requisições do frontend
+- Bypass de login no app (Device Preview) para fluxo rápido
+- Integração com Device Preview para testes de UI
 
 ### 📌 Funcionalidades principais
 - Login (pais e funcionários)

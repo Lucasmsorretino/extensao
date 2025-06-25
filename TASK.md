@@ -32,7 +32,7 @@ Documents\Curso ADS\Disciplinas\Extensao2\extensao\TASK.md
 - [ ] Upload de arquivos e imagens (foto de recado, cardápio, etc)
 - [ ] Painel administrativo web (futuro)
 - [ ] Migração para PostgreSQL em produção
-- [ ] Testes automatizados (backend)
+- [ ] Testes automatizados (em andamento)
 
 ---
 
@@ -42,7 +42,6 @@ Documents\Curso ADS\Disciplinas\Extensao2\extensao\TASK.md
 - [x] Bypass de login para fluxo rápido (Device Preview)
 - [x] Integração com Device Preview para testes de UI
 - [x] Ajustes de responsividade na UI (login e calendário)
-- [x] Remoção de botão duplicado na tela de avisos
 
 ---
 
@@ -52,5 +51,3 @@ Documents\Curso ADS\Disciplinas\Extensao2\extensao\TASK.md
 - Deploy funcional e documentado
 
 ---
-
-> Prompt para AI: “Update TASK.md to mark XYZ as done and add ABC as a new task.”

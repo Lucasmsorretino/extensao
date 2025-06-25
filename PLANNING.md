@@ -19,11 +19,11 @@ Criação de um aplicativo mobile com backend em Python para facilitar a comunic
 - **Hospedagem backend**: Render, Railway ou Heroku
 
 ### 🔧 Tecnologias
-| Camada         | Ferramenta            | Linguagem |
+| Camada         | Ferramenta             | Linguagem |
 |----------------|------------------------|-----------|
-| Frontend       | Flutter (mobile)       | Dart      |
+| Frontend       | Flutter                | Dart      |
 | Backend        | FastAPI                | Python    |
-| Banco de dados | SQLite / SQLModel       | SQL       |
+| Banco de dados | SQLite / SQLModel      | SQL       |
 | CI/CD          | GitHub Actions         | YAML      |
 | Versionamento  | Git + GitHub           | -         |
 | Notificações   | Firebase Cloud Messaging| -        |
@@ -37,7 +37,7 @@ app-creche/
 │   ├── routes/
 │   └── database/
 ├── frontend/
-│   └── flutter_project/ (opcional)
+│   └── flutter_project/ 
 ├── planning.md
 ├── task.md
 └── README.md

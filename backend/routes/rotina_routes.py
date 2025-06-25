@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from backend.auth import decode_access_token
+from auth import decode_access_token
 from fastapi import Depends
 from models.rotina import Rotina
 

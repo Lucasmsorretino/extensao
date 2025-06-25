@@ -19,11 +19,11 @@ Criação de um aplicativo mobile com backend em Python para facilitar a comunic
 - **Hospedagem backend**: Render, Railway ou Heroku
 
 ### 🔧 Tecnologias
-| Camada         | Ferramenta            | Linguagem |
+| Camada         | Ferramenta             | Linguagem |
 |----------------|------------------------|-----------|
-| Frontend       | Flutter (mobile)       | Dart      |
+| Frontend       | Flutter                | Dart      |
 | Backend        | FastAPI                | Python    |
-| Banco de dados | SQLite / SQLModel       | SQL       |
+| Banco de dados | SQLite / SQLModel      | SQL       |
 | CI/CD          | GitHub Actions         | YAML      |
 | Versionamento  | Git + GitHub           | -         |
 | Notificações   | Firebase Cloud Messaging| -        |
@@ -36,18 +36,24 @@ app-creche/
 │   ├── models.py
 │   ├── routes/
 │   └── database/
-├── mobile/
-│   └── flutter_project/ (opcional)
+├── frontend/
+│   └── flutter_project/ 
 ├── planning.md
 ├── task.md
 └── README.md
 ```
 
+## 🚧 Status do MVP
+- CRUD de avisos sem autenticação
+- Configuração de CORS no backend para permitir requisições do frontend
+- Bypass de login no app (Device Preview) para fluxo rápido
+- Integração com Device Preview para testes de UI
+
 ### 📌 Funcionalidades principais
 - Login (pais e funcionários)
 - Avisos e recados
 - Rotina diária da criança
-- Notificações de saúde (remédios, doenças)
+- Notificações/especficações de saúde (remédios, doenças)
 - Calendário escolar e cardápio
 - Notificações push
 

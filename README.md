@@ -36,12 +36,20 @@ app-creche/
 │   ├── routes/
 │   ├── database/
 │   └── requirements.txt
-├── mobile/
+├── frontend/
 │   └── flutter_project/
 ├── planning.md
 ├── task.md
 └── README.md
 ```
+
+## 🚧 Status do MVP
+- CRUD de avisos sem autenticação
+- Configuração de CORS no backend
+- Bypass de login para fluxo rápido (Device Preview)
+- Integração com Device Preview para testes de UI
+- Ajustes de responsividade na UI (login e calendário)
+- Remoção de botão duplicado na tela de avisos
 
 ---
 
